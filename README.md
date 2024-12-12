@@ -19,7 +19,7 @@ This experiment includes multiple public datasets, which are introduced below on
 
   labels: "your root path/masks/xxx.png", where "xxx" is included in the corresponding TXT file.
 
-  TXT files: "your root path/train.txt", "your root path/test_hr.txt"
+  TXT files: "your root path/train.txt", "your root path/test_hr.txt", "your root path/test.txt"
 
 ## 1.2 "NUAA"
 
