@@ -67,4 +67,30 @@ This experiment includes multiple public datasets, which are introduced below on
 
 If resources are insufficient to train this branch, you can directly initialize the encoder weights in "train_ISDTD.py" randomly. This approach can still achieve results close to the state-of-the-art (SOTA). Of course, with sufficient resources, more targeted results can be obtained.
 
+* change “--root” to your root path
+
+* choose "--dataset_type", "--phase"
+ 
+* set appropriate parameters, including "--base_size", "--crop_size", "--batch_size", "--val_batch_size", "--num_worker", and "--n_epoch"
+
+* you can also modify the result save location ("--results_hr", "--results_sr", "--results_lr") and checkpoint file save location ("--checkpoint") if needed
+
+* If you need to use WANDB for visualization, please set your key first (os.environ["WANDB_API_KEY"] = "xxxx").
+
+`python train_DCHFR.py`
+
 # 3.Training ISDTD branch
+
+* change “--root” to your root path
+
+* choose "--dataset_type", "--phase"
+
+* enter the file path of the trained DCHFR/ISDTD checkpoint into "--checkpoint_path" / "--ISDTD_checkpoint_path"
+ 
+* set appropriate parameters, including "--base_size", "--batch_size", "--val_batch_size", "--num_worker", "--n_epoch" and "--val_freq"
+
+* you can also modify the result save location ("--results_mask") and weight file save location ("--save_path") if needed
+
+* If you need to use WANDB for visualization, please set your key first (os.environ["WANDB_API_KEY"] = "xxxx").
+
+`python train_ISDTD.py`
